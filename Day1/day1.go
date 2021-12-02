@@ -1,11 +1,24 @@
 package Day1
 
-func GetDepths(data []int) int{
+import (
+	"AdventOfCode/Utils"
+	"fmt"
+)
+
+func Run() {
+	fmt.Println("Day1:")
+	data := Utils.ReadFileAsIntegers("./Day1/data.txt")
+	fmt.Println("Counter:", GetDepths(data))
+	fmt.Println("Counter Window:", GetDepthsWindow(data))
+	fmt.Println("----------")
+}
+
+func GetDepths(data []int) int {
 	counter := 0
 	lastMeasurement := data[0]
 
 	for index, measurement := range data {
-		if (index > 0)  && (lastMeasurement < measurement){
+		if (index > 0) && (lastMeasurement < measurement) {
 			counter++
 		}
 		lastMeasurement = measurement
@@ -13,7 +26,7 @@ func GetDepths(data []int) int{
 	return counter
 }
 
-func GetDepthsWindow(data []int) int{
+func GetDepthsWindow(data []int) int {
 	counter := 0
 	lastWindowValue := -1
 
