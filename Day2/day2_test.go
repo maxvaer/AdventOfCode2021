@@ -12,7 +12,7 @@ func TestCalculatePosition(t *testing.T) {
 	}
 }
 
-func TestCalculatePositionAimmode(t *testing.T) {
+func TestCalculatePositionAimMode(t *testing.T) {
 	data := []string{"forward 5", "down 5", "forward 8", "up 3", "down 8", "forward 2"}
 	expected := 900
 	result := CalculatePosition(data, true)
@@ -22,14 +22,14 @@ func TestCalculatePositionAimmode(t *testing.T) {
 	}
 }
 
-func BenchmarkGetDepths(b *testing.B) {
+func BenchmarkCalculatePosition(b *testing.B) {
 	data := []string{"forward 5", "down 5", "forward 8", "up 3", "down 8", "forward 2"}
 	for i := 0; i < b.N; i++ {
 		CalculatePosition(data, false)
 	}
 }
 
-func BenchmarkGetDepthsWindow(b *testing.B) {
+func BenchmarkCalculatePositionAimMode(b *testing.B) {
 	data := []string{"forward 5", "down 5", "forward 8", "up 3", "down 8", "forward 2"}
 	for i := 0; i < b.N; i++ {
 		CalculatePosition(data, true)
