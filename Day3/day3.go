@@ -8,9 +8,11 @@ import (
 )
 
 func Run() {
-	data := Utils.ReadFileAsString("./Day3/test.txt")
-	fmt.Println(CalculatePower(data))
-	fmt.Println(CalculateLifeSupport(data))
+	fmt.Println("Day3:")
+	data := Utils.ReadFileAsString("./Day3/data.txt")
+	fmt.Println("Power consumption: ", CalculatePower(data))
+	fmt.Println("LifeSupport rating: ", CalculateLifeSupport(data))
+	fmt.Println("----------")
 }
 
 func CalculatePower(data []string) int64 {
