@@ -64,3 +64,10 @@ func StringArrayContains(s []string, e string) bool {
 	}
 	return false
 }
+
+func ReverseString(s string) (result string) {
+	for _, v := range s {
+		result = string(v) + result
+	}
+	return
+}

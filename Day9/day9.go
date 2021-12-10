@@ -8,7 +8,7 @@ import (
 )
 
 func Run() {
-	fmt.Println("Day8:")
+	fmt.Println("Day9:")
 	heightMap := getHeightMapFromFile("./Day9/data.txt")
 	fmt.Println("Sum of LowPoints:", sumLowPoints(heightMap))
 	fmt.Println("Basin score:", calculateBasinScore(heightMap))
