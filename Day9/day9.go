@@ -123,7 +123,6 @@ func checkLowPoint(x int, y int, board [][]int) bool {
 	isLowPoint := true
 
 	if !minRow {
-
 		if board[y-1][x] <= value {
 			isLowPoint = false
 		}
